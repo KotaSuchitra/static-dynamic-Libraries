@@ -6,8 +6,8 @@ This project demonstrates how to create and use shared (dynamic) libraries in C,
 
 This project modularizes a simple **Key-Value Store** system using **Dynamic Linking** in C.  
 It demonstrates how to split a program into:
-- A **shared library** (`libkvstore.so`) that implements the key-value store functions.
-- A **main executable** (`dynamic_kvstore`) that dynamically loads the library at runtime using `dlopen()`, retrieves symbols with `dlsym()`, and releases it using `dlclose()`.
+- A **shared library** (`lib-kvstore.so`) that implements the key-value store functions.
+- A **main executable** (`dynamic-kvstore`) that dynamically loads the library at runtime using `dlopen()`, retrieves symbols with `dlsym()`, and releases it using `dlclose()`.
 
 This structure provides **modularity**, **flexibility**, and **runtime extensibility**, allowing the application to load updated logic without recompiling the main executable.
 
@@ -17,10 +17,10 @@ kvstore_project_M/
 │
 ├── kvstore.h           # Header file (function declarations)
 ├── kvstore.c           # Implements the key-value store (set/get)
-├── main_dlopen.c       # Demonstrates dynamic loading using dlopen()
-├── server.c            # Server side logic using Unix domain socket
-├── client.c            # Client side logic using Unix domain socket
-├── libkvstore.so       # Shared library generated after compilation
+├── main-dlopen.c       # Demonstrates dynamic loading using dlopen()
+├── kv-server.c            # Server side logic using Unix domain socket
+├── kv-client.c            # Client side logic using Unix domain socket
+├── lib-kvstore.so       # Shared library generated after compilation
 └── README.md           # Project documentation (this file)
 
 ## 🔹 Step 1: Compile the dynamic library (Position Independent Code)
