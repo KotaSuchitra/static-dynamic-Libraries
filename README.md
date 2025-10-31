@@ -1,4 +1,5 @@
-Modularise-key-value-store-using-dynamic-library
+🧩 Dynamic Library Demo(UNIX Domain Socket Server)
+
 This project demonstrates how to create and use shared (dynamic) libraries in C, and how to dynamically load them at runtime using dlopen(), dlsym(), and dlclose().It also includes a basic UNIX domain socket server that dynamically loads handler functions (like handle_client, die, and on_signal) from a shared library at runtime.
 
 ## 📘 Overview
